@@ -1,0 +1,23 @@
+.img{
+    max-width: 30%;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+.col-sm-12.borders {
+    height: 100%;
+    position: absolute;
+    border-style: solid;
+    border-bottom: none;
+    border-top: none;
+    border-width: 140px;
+    border-color: #1a6cff;
+}
+.col-sm-12 {
+    text-align: center;
+}
+.btn-primary{
+margin-top: 60px;
+    width: 50%;
+    height: 60px;
+    background-color: #1a6cff !important;
+}
