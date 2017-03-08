@@ -1,7 +1,7 @@
 <?php
 //Require needed files
 require_once "settings.php";
-
+require_once "classes/System/Databases/Database.php";
 //Set variable for errors
 $errors = [];
 
