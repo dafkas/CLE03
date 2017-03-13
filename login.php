@@ -28,7 +28,7 @@
     </div>
 </form>
 <div>
-    <a href="<?= BASE_PATH; ?>home">Go back to the list</a>
+    <a href="<?= BASE_PATH; ?>index">Home</a>
 </div>
 
 </body>
