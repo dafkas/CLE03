@@ -18,6 +18,7 @@ class Database
      *
      * @param $host
      * @param $username
+     * @param $port
      * @param $password
      * @param $database
      */
