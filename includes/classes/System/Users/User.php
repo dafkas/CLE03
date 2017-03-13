@@ -9,9 +9,4 @@
 class User
 {
     public $id, $name, $password, $email, $zipcode, $housenumber;
-
-    public function register()
-    {
-
-    }
 }
