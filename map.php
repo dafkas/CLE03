@@ -15,6 +15,12 @@
     </ul>
 <?php endif; ?>
 
-<a href="<?= BASE_PATH;?>logout">Logout</a>
+
+
+<div id="googleMap" style="width:40%;height:600px;"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvgNhRs-4DSPOX4R9zLC_ZO-n5ehc8GvE&callback=myMap"></script>
 </body>
 </html>

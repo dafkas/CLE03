@@ -1,10 +1,12 @@
-<?php namespace System\Databases;
+<?php
+namespace System\Databases;
 /**
  * Created by PhpStorm.
  * User: marvin_blabla
  * Date: 13-03-17
  * Time: 09:54
  */
+require_once "Database.php";
 
 class DatabaseSelector extends Database
 {
@@ -15,6 +17,10 @@ class DatabaseSelector extends Database
         $statement->execute([
             ':email' => $user,
             ':password' => $password]);
-        return $user;
+    }
+
+    public function getPlaces()
+    {
+        return $this->connection->query("SELECT * FROM places")->fetchAll(\PDO::FETCH_CLASS, "System\\Utils\\Place\\place");
     }
 }
