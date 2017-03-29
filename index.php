@@ -14,9 +14,9 @@
 <div class="col-sm-12 startup borders">
 	<img src="includes/pictures/logo.png" class="img1" alt="Insert foto hier">
 		<div class="row">
-			<a href="log_in.html"><button type="button" class="btn btn-primary menu">Log In
+			<a href="log_in.php"><button type="button" class="btn btn-primary menu">Log In
 				</button></a>
-			<a href="index.html"><button type="button" class="btn btn-primary menu">Register
+			<a href="index.php"><button type="button" class="btn btn-primary menu">Register
 			</button></a>
 
 		</div>

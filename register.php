@@ -9,7 +9,7 @@
 <body>
 <div class="col-sm-12 startup borders">
     <img src="includes/pictures/logo.png" class="img1" alt="Insert foto hier">
-        <form action="index.html">
+        <form action="index.php">
         <input class="credits" type="text" name="username" placeholder="username:" required>
         <br>
         <input class="credits" type="text" name="password" placeholder="password:" required>
