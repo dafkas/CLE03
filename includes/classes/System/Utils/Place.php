@@ -12,7 +12,11 @@ class Place
 
     public function getJson($places)
     {
-        header('Content-Type: text/html');
         echo json_encode($places);
+    }
+
+    public function getUpdates()
+    {
+
     }
 }

@@ -1,4 +1,5 @@
 <?php require_once "includes/initialize.php"?>
+<?php if ($isJson == false) : ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,3 +17,4 @@
 <?php endif; ?>
 </body>
 </html>
+<?php endif; ?>

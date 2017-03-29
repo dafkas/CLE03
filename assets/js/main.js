@@ -1,30 +1,27 @@
 /**
  * Created by marvin_blabla on 20-03-17.
  */
-var map;
 window.addEventListener('load', init);
+
+var play = 1;
+var img = document.createElement("img");
+
 
 function init()
 {
-    myMap();
-    getPlaces();
+    checkPlay();
+    getWeather();
 }
 
-function myMap() {
-    var latlng = new google.maps.LatLng(51.917383,4.435506);
-    map = new google.maps.Map(document.getElementById('googleMap'), {
-        center: latlng,
-        zoom: 17,
-        scrollwheel: false
-    });
-}
 
-function getPlaces()
+function getWeather()
 {
     reqwest({
-        url: 'includes/pages/map.php',
-        contentType: 'application/json',
-        success: setMarkers,
+        headers: { 'X-Auth-Token': '82affefcf77f4251be61c60bf7ededa6' },
+        url: 'http://api.football-data.org/v1/teams/1085',
+        contentType: 'json',
+        type: 'GET',
+        success: setWeather,
         error: errorHandler
     });
 }
@@ -33,20 +30,24 @@ function errorHandler(e) {
     console.log(e);
 }
 
-function setMarkers(data) {
-    var json = JSON.parse(data);
-    for(var i = 0; i < json.length; i++) {
-        console.log(json[i].lat)
-        setMarker(json[i].lat, json[i].lng);
+function setWeather()
+{
+    alert("success");
+}
+
+function checkPlay()
+{
+    if(play == 1)
+    {
+       img.src = "https://assets.digital.cabinet-office.gov.uk/media/559fbe3e40f0b6156700004f/traffic-light-green.jpg";
+        img.style = "width:14%;";
+       var foo = document.getElementById("playing");
+       foo.appendChild(img);
+    }
+    else {
+        img.src = "https://assets.digital.cabinet-office.gov.uk/media/559fbe1940f0b6156700004d/traffic-light-red.jpg";
+        img.style = "width:14%;";
+        var foo = document.getElementById("playing");
+        foo.appendChild(img);
     }
 }
-
-function setMarker(lat, lng) {
-    var latLng = new google.maps.LatLng(lat, lng);
-    var marker = new google.maps.Marker({
-        position: latLng,
-        map: map
-    });
-}
-
-

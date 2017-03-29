@@ -9,6 +9,7 @@ $session = new \System\Utils\Session();
 
 //Set variable for errors
 $errors = [];
+$isJson = false;
 
 try {
     //Get current filename to switch between logic

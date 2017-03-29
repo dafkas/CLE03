@@ -6,6 +6,8 @@
  * Time: 09:54
  */
 
+require_once "Database.php";
+
 class DatabaseInserter extends Database
 {
     public function addUser($user)
