@@ -1,38 +1,26 @@
-<?php namespace System\Databases;
-
-
+<?php
+namespace System\Databases;
 /**
- * Class DatabaseSelector
- * @package System\Databases
+ * Created by PhpStorm.
+ * User: marvin_blabla
+ * Date: 13-03-17
+ * Time: 09:54
  */
+require_once "Database.php";
+
 class DatabaseSelector extends Database
 {
-    /**
-     * Get all albums from the database
-     *
-     * @return array
-     */
-    public function getAlbums(): array
+    public function login($user, $password)
     {
-        return $this->connection->query("SELECT * FROM albums")->fetchAll(\PDO::FETCH_CLASS, "System\\MusicCollection\\Album");
+        $query = "SELECT * FROM users WHERE email = :email AND password = :password";
+        $statement = $this->connection->prepare($query);
+        $statement->execute([
+            ':email' => $user,
+            ':password' => $password]);
     }
 
-    /**
-     * Get a specific album by its ID
-     *
-     * @param $id
-     * @return Album
-     * @throws \Exception
-     */
-    public function getAlbumById($id): Album
+    public function getPlaces()
     {
-        $statement = $this->connection->prepare("SELECT * FROM albums WHERE id = :id");
-        $statement->execute([':id' => $id]);
-
-        if (($album = $statement->fetchObject("System\\MusicCollection\\Album")) === false) {
-            throw new \Exception("ID is not available in the database");
-        }
-
-        return $album;
+        return $this->connection->query("SELECT * FROM places")->fetchAll(\PDO::FETCH_CLASS, "System\\Utils\\Place\\place");
     }
 }

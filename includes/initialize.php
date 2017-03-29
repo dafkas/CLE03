@@ -2,8 +2,14 @@
 //Require needed files
 require_once "settings.php";
 require_once "classes/System/Databases/Database.php";
+require_once "classes/System/Utils/Session.php";
+
+//Start session
+$session = new \System\Utils\Session();
+
 //Set variable for errors
 $errors = [];
+$isJson = false;
 
 try {
     //Get current filename to switch between logic

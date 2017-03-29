@@ -1,7 +1,8 @@
 <?php
+require_once dirname(__FILE__) . "/../classes/System/Databases/Database.php";
+require_once dirname(__FILE__) . "/../settings.php";
 
-require_once dirname(__FILE__) . "/../classes/System/Databases/DatabaseSelector.php";
+$db = new \System\Databases\Database(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 $pageTitle = "Parking-soon";
-$db = new \System\Databases\Database(DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME);
 
-?>
+

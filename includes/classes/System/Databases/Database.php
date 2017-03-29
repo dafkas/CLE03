@@ -1,4 +1,5 @@
-<?php namespace System\Databases;
+<?php
+namespace System\Databases;
 
 /**
  * Class Database
@@ -18,16 +19,17 @@ class Database
      *
      * @param $host
      * @param $username
+     * @param $port
      * @param $password
      * @param $database
      */
-    public function __construct($host, $port, $username, $password, $database)
+    public function __construct($host, $username, $password, $database, $port)
     {
         $this->host = $host;
-        $this->port = $port;
         $this->username = $username;
         $this->password = $password;
         $this->database = $database;
+        $this->port = $port;
         $this->connect();
     }
 

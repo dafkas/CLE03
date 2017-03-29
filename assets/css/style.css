@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ul {
     list-style-type: none;
     overflow: hidden;
@@ -150,3 +151,8 @@ li{
         }
     }
 
+=======
+#trafficLight{
+    width:14%;
+}
+>>>>>>> e78ed42d9cc201e1aade026bf3804dd6f5d50be0
