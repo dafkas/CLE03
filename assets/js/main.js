@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 window.addEventListener("load", init);
 var numberOfLikes = 0;
 var numberOfDislikes = 0;
@@ -7,9 +7,11 @@ var dislikeButton;
 
 function init() {
     likeButton = document.getElementById('like');
-    likeButton.addEventListener('click', clickLike);
+    likeButton.addEventListener('click', clickLike );
     dislikeButton = document.getElementById('dislike');
     dislikeButton.addEventListener('click', clickDislike);
+    checkPlay();
+    getWeather();
 }
 function clickLike() {
     numberOfLikes += 1;
@@ -19,22 +21,8 @@ function clickDislike() {
     numberOfDislikes += 1;
     document.getElementById("dislikes").innerHTML = numberOfDislikes;
 }
-=======
-/**
- * Created by marvin_blabla on 20-03-17.
- */
-window.addEventListener('load', init);
-
 var play = 1;
 var img = document.createElement("img");
-
-
-function init()
-{
-    checkPlay();
-    getWeather();
-}
-
 
 function getWeather()
 {
@@ -73,4 +61,4 @@ function checkPlay()
         foo.appendChild(img);
     }
 }
->>>>>>> e78ed42d9cc201e1aade026bf3804dd6f5d50be0
+
